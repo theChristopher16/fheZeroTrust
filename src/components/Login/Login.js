@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Login.css';
 
 function Login() {
   return (
@@ -18,9 +19,6 @@ function Login() {
         <br />
         <button type="submit">Submit</button>
       </form>
-      <Link to="/">
-        <button>Home</button>
-      </Link>
     </div>
   );
 }
