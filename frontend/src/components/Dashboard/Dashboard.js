@@ -23,6 +23,7 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <h1>Welcome to the Dashboard</h1>
+      <h1>Testing Jenkins</h1>
       <Link to="/login">
       <button>Login</button>
       </Link>
