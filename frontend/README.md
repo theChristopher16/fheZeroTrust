@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# MERN Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For those who wish to separate [MERN Boilerplate](https://github.com/djizco/mern-boilerplate) into the client and server, this repo is for the client. This project is meant to be used alongside [MERN Server](https://github.com/djizco/mern-server).
 
-## Available Scripts
+## Requirements
 
-In the project directory, you can run:
+* Operating System: MacOS or Linux
+* [Node.js](https://nodejs.org/) (I recommend installing with [NVM](https://github.com/nvm-sh/nvm))
 
-### `npm start`
+## Quick Start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Setup
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm install
+```
 
-### `npm test`
+#### for Development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the client
+```bash
+npm run start
+```
 
-### `npm run build`
+#### for Production
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Other Commands
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm test
+npm run lint
+npm run lint:fix
+npm run test:coverage
+npm run test:verbose
+npm run test:watch
+```
 
-### `npm run eject`
+## Setup Instructions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Note: This is now a github template project. This makes copying the contents of the project
+into a new repo very simple.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To setup your own project, you will need to copy the contents of this project into a new repo.
+You will need to update the content in these files to names of your project and yourself:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* package.json: name, version, description, repository, author, bugs, homepage
+* LICENSE: (update to your preferred license)
+* client/index.html: description and title
+* this README.md
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This is also a good time to go through the included libraries to add or remove features that you want.
 
-## Learn More
+After this you can commit the files into a new repository and push up to your github.
+You can now start updating files in your client to begin working on your own project!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Webpack conveniently bundles your code for you.
+* Babel lets you use ES6/7 features.
+* CSS pre-processor setup for LESS and SASS lets you keep your styles clean and organized.
+* ESLint helps you maintain a high level of code quality.
+* Jest gives you a robust testing framework to make sure your code works.
 
-### Code Splitting
+## Code Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+- client
+  - api
+  - assets
+    - images
+    - icons
+  - components
+    - atoms
+    - molecules
+    - organisms
+    - pages
+    - environment
+  - hooks
+  - store
+    - actions
+    - reducers
+    - thunks
+    - tests
+  - styles
+  - utils
+- config
+- scripts
+```
 
-### Analyzing the Bundle Size
+Component Heirarchy:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Environment > Pages > Organisms > Molecules > Atoms
 
-### Making a Progressive Web App
+This is based on atomic design. Learn more about [atomic design](http://bradfrost.com/blog/post/atomic-web-design/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Technologies
 
-### Advanced Configuration
+[React](https://facebook.github.io/react/) - View Library
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+[Redux](http://redux.js.org/) - State Manager
 
-### Deployment
+[Webpack](https://webpack.github.io/) - Module Bundler
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[React Notifications Component](https://teodosii.github.io/react-notifications-component/) - Notification System
 
-### `npm run build` fails to minify
+[Bulma](http://bulma.io/) - CSS Framework
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[React Bulma Companion](https://github.com/djizco/react-bulma-companion) - Bulma Component Library
+
+[FontAwesome](http://fontawesome.io/) - Icons
+
+[Ramda](http://ramdajs.com/) - Functional Library
+
+[date-fns](https://date-fns.org/) - Date Functions Library
+
+[SuperAgent](https://github.com/visionmedia/superagent) - HTTP Request Library
+
+[ESLint](http://eslint.org/) - Code Linter
+
+[Jest](https://jestjs.io/) - Testing Framework

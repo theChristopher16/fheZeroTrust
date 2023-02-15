@@ -1,7 +1,4 @@
 FROM node:latest
-
-WORKDIR /src
-COPY package*.json ./
-RUN npm install --only=production
+WORKDIR /app
 COPY . .
-CMD [ "npm", "run" ]
+CMD [ "npm", "start", "run" ]

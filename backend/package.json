@@ -1,19 +1,66 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "mern-server",
+  "version": "0.1.0",
+  "description": "Server for MERN Boilerplate",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "./scripts/test.sh",
+    "test:verbose": "./scripts/test-verbose.sh",
+    "test:coverage": "./scripts/test-coverage.sh",
+    "test:watch": "./scripts/test-watch.sh"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djizco/mern-server.git"
+  },
+  "author": {
+    "name": "Federico Rojas",
+    "email": "djizco@yahoo.com",
+    "url": "https://github.com/djizco"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djizco/mern-server/issues"
+  },
+  "keywords": [
+    "express",
+    "passport",
+    "ramda",
+    "eslint",
+    "jest"
+  ],
+  "homepage": "https://github.com/djizco/mern-server#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "dependencies": {
+    "@typegoose/auto-increment": "^1.8.0",
     "bcryptjs": "^2.4.3",
-    "dotenv": "^16.0.3",
+    "body-parser": "^1.20.1",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.9.0"
+    "express-session": "^1.17.3",
+    "mongoose": "^6.6.7",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "ramda": "^0.28.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20",
+    "pre-commit": "^1.2.2",
+    "supertest": "^6.3.3"
   }
 }
