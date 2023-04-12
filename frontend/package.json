@@ -72,6 +72,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.2",
     "regenerator-runtime": "^0.13.11",
+    "seal-wasm": "^0.0.1",
     "superagent": "^8.0.6",
     "terser-webpack-plugin": "^5.3.6",
     "webpack": "^5.75.0",
